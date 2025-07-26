@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@theme{
+
+}
+
+@layer base{
+  body{
+  @apply
+  }
+  h1{
+  @apply 
+  }
+  
+  p{
+  @apply 
+  }
+  }
+
+@layer components{
+  
+}
+
+@utility margins{
+  
+}
