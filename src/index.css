@@ -25,7 +25,7 @@
       @apply px-2 text-coffee font-bold text-[calc(min(2.5vw,20px))];
   }
   li{
-      @apply flex;
+      @apply flex place-items-center-safe;
   }
   }
 
@@ -38,5 +38,5 @@
   @apply rounded-3xl;
 } 
 @utility icon{
-  @apply w-[calc(min(2.5vw,20px)*1.2)] 
+  @apply w-[calc(min(2.5vw,20px)*1.2)] h-[calc(min(2.5vw,20px)*1.2)] place-self-start
 }
