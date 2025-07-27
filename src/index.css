@@ -1,25 +1,42 @@
 @import "tailwindcss";
-/* @theme{
-
+@theme{
+--color-latte:#FaE0C8;
+--color-cream:#E7C691;
+--color-coffee:#6D4021;
+--color-blackcoffee:#271C14;
+--color-darkblue:#1B1928;
 }
 
 @layer base{
+  html{
+    font-family:"DM Serif Text",serif;
+  }
+  div{
+    @apply py-[min(2.5vw,20px)] text-coffee font-bold text-[calc(min(2.5vw,20px))];
+
+  }
   body{
-  @apply
+  @apply min-h-screen bg-gradient-to-bl from-latte to-cream dark:bg-darkblue m-3 ;
   }
   h1{
-  @apply 
+  @apply text-coffee font-bold text-[calc(min(2.5vw,20px)*1.7)];
   }
-  
   p{
-  @apply 
+      @apply px-2 text-coffee font-bold text-[calc(min(2.5vw,20px))];
+  }
+  li{
+      @apply flex;
   }
   }
 
+/*
 @layer components{
   
 }
-
-@utility margins{
-  
-} */
+*/
+@utility round{
+  @apply rounded-3xl;
+} 
+@utility icon{
+  @apply w-[calc(min(2.5vw,20px)*1.2)] 
+}
