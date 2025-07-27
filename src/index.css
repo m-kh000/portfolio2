@@ -1,4 +1,7 @@
 @import "tailwindcss";
+:root{
+  --scale:min(2.5vw,20px);
+}
 @theme{
 --color-latte:#FaE0C8;
 --color-cream:#E7C691;
@@ -12,21 +15,22 @@
     font-family:"DM Serif Text",serif;
   }
   div{
-    @apply py-[min(2.5vw,20px)] text-coffee font-bold text-[calc(min(2.5vw,20px))];
+    @apply py-4 text-coffee font-bold text-[calc(var(--scale))];
 
   }
   body{
   @apply min-h-screen bg-gradient-to-bl from-latte to-cream dark:bg-darkblue m-3 ;
   }
   h1{
-  @apply text-coffee font-bold text-[calc(min(2.5vw,20px)*1.7)];
+  @apply text-coffee font-bold text-[calc(var(--scale)*1.7)];
   }
   p{
-      @apply px-2 text-coffee font-bold text-[calc(min(2.5vw,20px))];
+      @apply px-2 text-coffee font-bold text-[calc(var(--scale))];
   }
   li{
       @apply flex place-items-center-safe;
   }
+  
   }
 
 /*
@@ -38,5 +42,5 @@
   @apply rounded-3xl;
 } 
 @utility icon{
-  @apply w-[calc(min(2.5vw,20px)*1.2)] h-[calc(min(2.5vw,20px)*1.2)] place-self-start
+  @apply w-[calc(var(--scale)*1.2)] h-[calc(var(--scale)*1.2)] place-self-start
 }
