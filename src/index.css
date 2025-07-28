@@ -11,13 +11,12 @@
 }
 
 @layer base{
-  /* App.css or index.css */
 body {
   margin: 0;
   min-height: 100vh;
   background: #FaE0C8;
   color:#FaE0C8;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 body.darkmode {
@@ -67,4 +66,7 @@ body {
 } 
 @utility icon{
   @apply w-[calc(var(--scale)*1.2)] h-[calc(var(--scale)*1.2)] place-self-start
+}
+@utility img{
+  @apply w-[calc(var(--scale)*100)] h-[calc(var(--scale)*100)] place-self-start
 }
