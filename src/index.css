@@ -7,30 +7,54 @@
 --color-cream:#E7C691;
 --color-coffee:#6D4021;
 --color-blackcoffee:#271C14;
---color-darkblue:#1B1928;
+--color-darkblue:#1B1C20;
 }
 
 @layer base{
+  /* App.css or index.css */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #FaE0C8;
+  color:#FaE0C8;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.darkmode {
+  background: #1B1C20;
+  color: inherit;
+}
+
+body.darkmode p, body.darkmode h1, body.darkmode h2 {
+  color: #FaE0C8;
+}
+
+
+body.darkmode #toolbar {
+  background: #2B2E34;
+}
+
+body {
+}
   html{
     font-family:"DM Serif Text",serif;
   }
   div{
-    @apply py-4 text-coffee font-bold text-[calc(var(--scale))];
-
+    @apply py-4 px-1 text-coffee font-bold text-[calc(var(--scale))] ;
   }
-  body{
-  @apply min-h-screen bg-gradient-to-bl from-latte to-cream dark:bg-darkblue m-3 ;
-  }
+  
   h1{
-  @apply text-coffee font-bold text-[calc(var(--scale)*1.7)];
+  @apply text-coffee font-bold text-[calc(var(--scale)*1.7)] ;
   }
   p{
-      @apply px-2 text-coffee font-bold text-[calc(var(--scale))];
+      @apply px-2 text-coffee font-bold text-[calc(var(--scale))] ;
   }
   li{
       @apply flex place-items-center-safe;
   }
-  
+  #toolbar{
+    @apply bg-amber-50;
+  }
   }
 
 /*
@@ -39,7 +63,7 @@
 }
 */
 @utility round{
-  @apply rounded-3xl;
+  @apply rounded-2xl;
 } 
 @utility icon{
   @apply w-[calc(var(--scale)*1.2)] h-[calc(var(--scale)*1.2)] place-self-start
