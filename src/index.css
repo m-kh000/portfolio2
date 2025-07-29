@@ -14,11 +14,10 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #FaE0C8;
-  color:#FaE0C8;
-  transition: background-color 0.4s, color 0.4s;
+  background: #EEDDB2;
+  color:#EEDDB2;
+  
 }
-
 body.darkmode {
   background: #1B1C20;
   color: inherit;
@@ -33,13 +32,16 @@ body.darkmode #toolbar {
   background: #2B2E34;
 }
 
+#mira{
+  @apply text-[calc(var(--scale)*6)] text-blackcoffee
+}
 body {
 }
   html{
     font-family:"DM Serif Text",serif;
   }
   div{
-    @apply py-4 px-1 text-coffee font-bold text-[calc(var(--scale))] ;
+    @apply py-4 px-1 text-coffee font-bold text-[calc(var(--scale))] z-10;
   }
   
   h1{
@@ -68,5 +70,5 @@ body {
   @apply w-[calc(var(--scale)*1.2)] h-[calc(var(--scale)*1.2)] place-self-start
 }
 @utility img{
-  @apply w-[calc(var(--scale)*100)] h-[calc(var(--scale)*100)] place-self-start
+  @apply w-[calc(var(--scale)*40)] h-[calc(var(--scale)*30)] place-self-start ;
 }

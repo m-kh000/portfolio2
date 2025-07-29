@@ -65,8 +65,16 @@ function App() {
           </ul>
         </div>
       </div>
-      <img src="1.png" className="img"/>
-    </div>
+      <div id="rightside" className="p-0 ">
+      <div id="mira" className="z-20 absolute m-10">hi<li/>it's Mira Khnefes</div>
+        <div id="image"className="absolute  z-0 p-0">
+          {isDarkMode ? (
+                <img src="circledark.png" className="img " />
+              ) : (
+                <img src="circlelight2.png" className="img "/>
+              )}
+        </div>
+    </div></div>
   );
 }
 
